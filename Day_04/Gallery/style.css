@@ -1,0 +1,102 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  height: 100vh;
+  overflow: hidden;
+  background-image: linear-gradient(-225deg, #cbbacc 0%, #2580b3 100%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.wrapper {
+  width: 1200px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin: auto;
+}
+
+img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  transition: 0.5s;
+}
+
+.album__image {
+  width: 22%;
+  height: 200px;
+  border-radius: 4px;
+  overflow: hidden;
+  cursor: pointer;
+  margin: 20px 0;
+}
+
+.album__image:hover img {
+  transform: scale(1.2);
+}
+
+.gallery {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.8);
+  display: flex;
+  align-items: center;
+  color: #fff;
+  /* ẩn gallery */
+  opacity: 0;
+  pointer-events: none;
+  transform: scale(0.8);
+  transition: 0.5s;
+}
+
+.close {
+  position: fixed;
+  top: 15px;
+  right: 25px;
+  font-size: 3rem;
+  cursor: pointer;
+}
+
+.control {
+  font-size: 3rem;
+  color: rgba(255, 255, 255, 0.88);
+  position: absolute;
+  cursor: pointer;
+}
+
+.prev {
+  left: 15px;
+  top: 50%;
+}
+
+.next {
+  right: 15px;
+  top: 50%;
+}
+
+.gallery__inner {
+  width: 70%;
+  height: 70%;
+  margin: 0 auto;
+}
+
+/* -------------------- Custom js  ------------------------- */
+/* hiện gallarey  */
+.showGallery {
+  opacity: 1;
+  pointer-events: auto;
+  transform: scale(1);
+}
+
+/* ẩn ảnh khi hết ảnh để click prev */
+.hide {
+  display: none;
+}

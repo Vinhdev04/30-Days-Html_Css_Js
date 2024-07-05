@@ -27,6 +27,7 @@ body {
   transform: translate(-50%, -50%);
   font-size: 1.6rem;
   font-weight: 400;
+  cursor: pointer;
 }
 
 .modal {
