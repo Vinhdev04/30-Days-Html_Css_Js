@@ -43,6 +43,7 @@ body {
   text-align: center;
   overflow: hidden;
   box-shadow: 0px 0px 10px 5px #bfb1b1;
+  transition: 0.5s;
 }
 
 .card__img img {
@@ -107,10 +108,28 @@ body {
   margin-top: 25px;
   color: #fff;
   border-radius: 5px;
-  transition: 0.5s;
+  transition: 0.5s linear;
 }
 
 .btn:hover {
   cursor: pointer;
   background-color: #402e7a;
+  transform: scale(1.2);
+}
+
+.card-icon:hover {
+  animation: rotate 0.5s 0.2s linear infinite;
+}
+
+.card-icon {
+  animation: none;
+}
+
+@keyframes rotate {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
 }
