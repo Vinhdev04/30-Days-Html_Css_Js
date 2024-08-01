@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="shortcut icon" href="/img/icon16.png" type="image/x-icon">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+  <link rel="stylesheet" href="style.css">
+  <title>Weather App with API</title>
+</head>
+<body>
+  <div id="weather">
+    <input class="search__name" type="text"></input>
+    <div class="weather-content">
+      <h1 class="title">
+        <span class="title__capital">Ha Tinh</span>
+        <span>,</span>
+        <span class="title__nation">Việt Nam</span>
+      </h1>
+      <p class="desc__time">7/31/2024, 9:36:40 PM</p>
+      <div class="temperature">
+        <span class="temperature__value">29 <sup>o</sup>C</span>
+      </div>
+      <div class="desc__weather">Clouds</div>
+      <div class="weather__info">
+        <div class="visible">
+          <i class="fa-solid fa-eye icon__visible"></i>
+          <span>1000 (m)</span>
+        </div>
+        <div class="wind">
+          <i class="fa-solid fa-wind icon__wind"></i>
+          <span>1000 (m/s)</span>
+        </div>
+        <div class="temp">
+          <i class="fa-solid fa-temperature-high icon__temp"></i>
+          <span>70 (%)</span>
+        </div>
+      </div>
+    </div>
+  </div>
+  <script src="main.js"></script>
+</body>
+</html>

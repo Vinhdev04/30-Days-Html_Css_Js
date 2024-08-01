@@ -14,7 +14,7 @@ function getTags() {
   }
   // sau khi hàm chạy thì input ko bị mất đi và focus vào input
   container.appendChild(input);
-  // input.focus();
+  input.focus();
 }
 getTags();
 
