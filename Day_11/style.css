@@ -63,7 +63,6 @@ body {
   top: 20px;
   right: 20px;
   overflow: hidden;
-  transition: 0.2s;
   animation: moveShow 2s ease forwards;
   /* animation: moveHide 2s ease forwards; */
 }
@@ -76,8 +75,11 @@ body {
   padding: 20px;
   border-radius: 6px;
   color: #fff;
-  font-size: 1.2rem; /* Chỉnh lại kích thước font trong message */
+  font-size: 1rem; /* Chỉnh lại kích thước font trong message */
   margin-bottom: 10px; /* Thêm margin dưới để tách các message */
+  transition: 0.2s;
+  border-left: 6px solid var(--success-color);
+  opacity: 0.9;
 }
 
 .message.success {
@@ -98,14 +100,16 @@ body {
 .desc {
   margin-left: 10px;
 }
+
 .time__line {
   height: 4px;
+  width: 100%;
   position: absolute; /* Đặt position thành absolute */
   bottom: 0;
   left: 0;
+  background: var(--success-color);
   animation: progress 2s ease forwards;
   transition: 2s;
-  animation: progress 2s ease forwards;
 }
 
 .message.success .time__line {
