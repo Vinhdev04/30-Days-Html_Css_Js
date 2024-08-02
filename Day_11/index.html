@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/img/icon16.png" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <title>Animation Toast</title>
+  </head>
+  <body>
+    <div class="container">
+      <button class="btn__success">Show Success</button>
+      <button class="btn__warning">Show Warning</button>
+      <button class="btn__error">Show Error</button>
+    </div>
+    <div id="message">
+      <div class="message success">
+        <i class="fa-solid fa-circle-check icon__success"></i>
+        <span class="desc">This is a success message</s>
+        <span class="time__line"></span>
+      </div>
+      <div class="message warning">
+        <i class="fa-solid fa-circle-exclamation"></i>
+        <span class="desc">This is a warning message</s>
+        <span class="time__line"></span>
+      </div>
+      <div class="message error">
+        <i class="fa-solid fa-triangle-exclamation"></i>
+        <span class="desc">This is an errored message</s>
+        <span class="time__line"></span>
+      </div>
+    </div>
+  </body>
+  <script src="main.js"></script>
+</html>

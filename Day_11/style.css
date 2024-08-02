@@ -1,0 +1,163 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --success-color: rgb(0, 128, 0);
+  --warning-color: rgb(207, 140, 15);
+  --error-color: rgb(231, 38, 38);
+  --success-notice: rgba(0, 128, 0, 0.4);
+  --warning-notice: rgba(200, 134, 11, 0.4);
+  --error-notice: rgba(231, 38, 38, 0.4);
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  font-family: "Poppins", sans-serif;
+  font-size: 1.6rem; /* Chỉnh lại kích thước font chính thành rem */
+  background: #cecaca;
+}
+
+.btn__success,
+.btn__warning,
+.btn__error {
+  border: none;
+  outline: none;
+  padding: 10px 12px;
+  margin: 0 10px;
+  font-size: 1.4rem;
+  border-radius: 10px;
+  cursor: pointer;
+  color: #fff;
+  transition: 0.5s linear;
+}
+
+.btn__success:hover,
+.btn__warning:hover,
+.btn__error:hover {
+  opacity: 0.7;
+  transform: scale(1.1);
+}
+
+.btn__success {
+  background-color: var(--success-color);
+}
+
+.btn__warning {
+  background-color: var(--warning-color);
+}
+
+.btn__error {
+  background-color: var(--error-color);
+}
+
+#message {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  overflow: hidden;
+  transition: 0.2s;
+  animation: moveShow 2s ease forwards;
+  /* animation: moveHide 2s ease forwards; */
+}
+
+.message {
+  position: relative; /* Đặt position thành relative */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  border-radius: 6px;
+  color: #fff;
+  font-size: 1.2rem; /* Chỉnh lại kích thước font trong message */
+  margin-bottom: 10px; /* Thêm margin dưới để tách các message */
+}
+
+.message.success {
+  background: var(--success-notice);
+  border-left: 6px solid var(--success-color);
+}
+
+.message.warning {
+  background: var(--warning-notice);
+  border-left: 6px solid var(--warning-color);
+}
+
+.message.error {
+  background: var(--error-notice);
+  border-left: 6px solid var(--error-color);
+}
+
+.desc {
+  margin-left: 10px;
+}
+.time__line {
+  height: 4px;
+  position: absolute; /* Đặt position thành absolute */
+  bottom: 0;
+  left: 0;
+  animation: progress 2s ease forwards;
+  transition: 2s;
+  animation: progress 2s ease forwards;
+}
+
+.message.success .time__line {
+  /* width: 100%; Đặt chiều rộng tương ứng cho success */
+  background: var(--success-color);
+}
+
+.message.warning .time__line {
+  /* width: 70%; Đặt chiều rộng tương ứng cho warning */
+  background: var(--warning-color);
+}
+
+.message.error .time__line {
+  /* width: 50%; Đặt chiều rộng tương ứng cho error */
+  background: var(--error-color);
+}
+
+@keyframes progress {
+  0% {
+    width: 100%;
+  }
+  100% {
+    width: 0%;
+  }
+}
+
+@keyframes moveShow {
+  0% {
+    transform: translateX(100%);
+  }
+  25% {
+    transform: translateX(-10%);
+  }
+  50% {
+    transform: translateX(0%);
+  }
+  100% {
+    transform: translateX(-10px);
+  }
+}
+
+@keyframes moveHide {
+  0% {
+    transform: translateX(-10%);
+  }
+  25% {
+    transform: translateX(0%);
+  }
+  50% {
+    transform: translateX(-10%);
+  }
+  100% {
+    transform: translateX(200%);
+  }
+}
