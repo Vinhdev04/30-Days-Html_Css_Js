@@ -1,0 +1,115 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: #918d8d;
+  font-family: "Roboto", sans-serif;
+}
+
+.container {
+  background: #fff;
+  width: 500px;
+  height: 600px;
+  border-radius: 10px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3);
+  text-align: center;
+  padding: 10px 20px;
+  overflow: hidden;
+  overflow-y: scroll;
+}
+
+.title {
+  margin: 15px;
+}
+
+.search {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 30px;
+  border: 2px solid #000;
+  font-size: 20px;
+  padding: 5px 10px;
+  border-radius: 10px;
+}
+
+.input__data {
+  width: 100%;
+  padding: 2px 3px;
+  font-weight: bold;
+  outline: none;
+  border: none;
+}
+
+.icon__search {
+  margin-right: 5px;
+  padding: 5px;
+  color: #000;
+}
+
+.list__product {
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  height: 100px;
+  padding: 10px 20px;
+  cursor: pointer;
+  transition: 0.5s;
+  margin-bottom: 20px;
+}
+
+.products .media {
+  width: 100px;
+  object-fit: cover;
+  object-position: center;
+  margin-right: 10px;
+}
+
+.list__product .info {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  justify-content: space-around;
+  align-items: center;
+  width: 100%;
+}
+
+.info__name {
+  /* display: flex;
+  justify-content: start;
+  align-items: center; */
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+  max-width: 200px;
+}
+
+.info__name:hover,
+.info__price:hover {
+  opacity: 0.7;
+}
+
+.info__name,
+.info__price {
+  font-weight: bold;
+  font-size: 18px;
+  text-align: center;
+  width: 100%;
+}
+
+.info__price {
+  font-weight: 500;
+}
+
+.list__product:hover {
+  background: #dadada;
+}
