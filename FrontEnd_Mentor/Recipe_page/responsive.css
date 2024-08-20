@@ -1,0 +1,21 @@
+/*  Mobile */
+
+@media (max-width: 376px) {
+  body {
+    padding: 0;
+  }
+
+  .section-1 {
+    padding: 0;
+    margin-bottom: 10px;
+  }
+
+  .main-page {
+    max-width: 100%;
+    border-radius: 0;
+  }
+
+  .section-1 img {
+    border-radius: 0;
+  }
+}

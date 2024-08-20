@@ -1,35 +1,42 @@
-// Test data
-let mockDataa = [
-  {
-    name: "product 1",
-    price: 999,
-    images: "",
-  },
-];
+const products = document.querySelector(".products");
+const filter = document.getElementById("filter");
+const listItems = [];
 
-// Mockdata from API
-let products = document.querySelector(".products");
+getData();
 
-// Initialize
-mockDataa.forEach((items) => {
-  // <div class="list__product">
-  //   <img class="media" src="./product011.png" />
-  //   <div class="info">
-  //     <div class="info__name">Product 01</div>
-  //     <div class="info__price">99$</div>
-  //   </div>
-  // </div>;
+filter.addEventListener("input", (e) => filterData(e.target.value));
 
-  let itemProduct = document.createElement("div");
-  itemProduct.classList.add("list__product");
-  itemProduct.innerHTML = `
-  <img class="media" src="${items.images}" />
-    <div class="info">
-      <div class="info__name">${items.name}</div>
-      <div class="info__price">${items.price}</div>
-    </div>`;
+async function getData() {
+  const res = await fetch("https://fakestoreapi.com/products");
 
-  products.appendChild(itemProduct);
-});
+  const results = await res.json();
 
-// Call API
+  // Clear products
+  products.innerHTML = "";
+
+  results.forEach((product) => {
+    const div = document.createElement("div");
+    div.setAttribute("class", "product");
+    listItems.push(div);
+
+    div.innerHTML = `
+			<img src="${product.image}" alt="">
+			<div class="product-detail">
+				<h4>${product.title.slice(0, 30)}</h4>
+				<p>$${product.price}</p>
+			</div>
+        `;
+
+    products.appendChild(div);
+  });
+}
+
+function filterData(search) {
+  listItems.forEach((item) => {
+    if (item.innerText.toLowerCase().includes(search.toLowerCase())) {
+      item.classList.remove("hide");
+    } else {
+      item.classList.add("hide");
+    }
+  });
+}
